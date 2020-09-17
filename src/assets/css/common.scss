@@ -1,0 +1,259 @@
+html,
+body {
+  margin: 0;
+  color: $text;
+  letter-spacing: 0.5px;
+  font-family: 'Futura', "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑","MicrosoftJhengHei",'华文细黑',STHeiti,MingLiu, Arial, sans-serif;
+  font-size: $font-size-base;
+  background-color: #eaeff8;
+  font-weight: 400;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  overflow-y: hidden;
+  // background-image:url('./../image/ground.jpeg');
+  // background-size: cover;
+}
+*, *:hover {
+  @include transition(
+    background-color .25s linear,
+    color .10s linear,
+    margin .25s linear,
+    opacity .25s linear,
+    filter .25s linear,
+    visibility .25s linear,
+    transform .25s linear,
+    border-color .25s linear);
+}
+
+// 内容区域
+
+.container {
+  margin: 0 auto;
+}
+
+
+@font-face {
+  font-family: 'iconfont';  /* project id 721641 */
+  src: url('//at.alicdn.com/t/font_721641_a16lha89744.eot');
+  src: url('//at.alicdn.com/t/font_721641_a16lha89744.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_721641_a16lha89744.woff') format('woff'),
+  url('//at.alicdn.com/t/font_721641_a16lha89744.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_721641_a16lha89744.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:12px;font-style:normal;
+  margin-right: 2px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.el-textarea {
+  width: 100%;
+  textarea {
+    resize: none;
+  }
+}
+
+.el-input-number__increase {
+  border-top: 1px solid #dcdfe6;
+}
+.el-input-number__decrease {
+  border-top: 1px solid #dcdfe6;
+}
+
+// 面包屑
+.el-breadcrumb__separator {
+  margin: 6px !important;
+  &:after {
+    content: '/'
+  }
+}
+
+
+.iconfont.mar {
+  margin-right: 4px;
+}
+
+.el-input__suffix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .el-input__suffix-inner {
+    margin-right: 10px;
+    img {
+      width: 25px;
+    }
+  }
+}
+
+.el-menu {
+  .el-submenu {
+    .el-submenu__title {
+      height: 50px !important;
+      line-height: 50px !important;
+      padding-left: 20px;
+      img {
+        width: 16px;
+      }
+    }
+  }
+  .el-menu-item {
+    height: 45px !important;
+    line-height: 45px !important;
+    position: relative;
+    img {
+      width: 16px;
+    }
+    > .before{
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      background: red;
+      left: 0;
+    }
+  }
+}
+
+
+// 内容表格
+.table {
+  padding: $normal-pad;
+  background: $white;
+
+  .head {
+    background: #f2f2f2;
+  }
+
+  .el-table--enable-row-hover .el-table__body tr:hover>td {
+    background: #f2f2f2;
+  }
+
+  >.pagination {
+    margin-top: 1rem;
+    text-align: right;
+  }
+}
+
+.el-form-item__label{
+  &::before {
+    content: '';
+    display: none;
+  }
+}
+
+
+// 清除浮动
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.el-select .el-input .el-input__icon {
+  font-size: 16px !important;
+}
+
+// el-check-group
+
+.el-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  >.el-checkbox-button {
+    margin: 4px;
+
+    >.el-checkbox-button__inner  {
+      border: 1px solid rgb(191, 201, 217);
+      border-radius: 4px;
+    }
+  }
+}
+
+// dialog
+.el-dialog {
+  border-radius: 5px !important;
+  .el-dialog__title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #1f2d3d;
+  }
+
+  .el-dialog__body {
+    padding: 20px;
+  }
+}
+
+.el-picker-panel__body-wrapper {
+  button {
+    padding: 0;
+  }
+}
+
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: $disabled;
+  font-size: 1rem;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $disabled;
+  font-size: 1rem;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $disabled;
+  font-size: 1rem;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: $disabled;
+  font-size: 1rem;
+}
+
+
+::-webkit-scrollbar {
+  width: .3rem;
+  height: .3rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: rgba(95,95,95,.4);
+  transition: all .2s;
+  border-radius: .5rem;
+
+  &:hover {
+    background-color: rgba(95,95,95, .7);
+  }
+}
+
+
+input[type="number"]{-moz-appearance:textfield;}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
